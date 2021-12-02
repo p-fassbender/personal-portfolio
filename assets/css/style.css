@@ -3,6 +3,7 @@ GLOBAL
 HTML
 BODY
 HEADER
+MEDIA QUERIES
 */
 
 /* GLOBAL */
@@ -83,5 +84,18 @@ header nav ul li a:hover{
     border-radius: 15px;
     text-shadow: none;
 }
-
 /* HEADER END */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 980px){
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}
+/* MEDIA QUERIES END*/
