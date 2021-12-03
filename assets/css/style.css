@@ -115,10 +115,21 @@ header nav ul li a:hover{
     background-image: url("../images/run-buddy-screenshot.png");
     background-size: cover;
     background-position: top;
+    position: relative;
 }
+
 .card:nth-of-type(1){
     border-color:crimson;
     width: 100%;
+}
+
+.card-title {
+    position: absolute;
+    width: 160px;
+    height: 80px;
+    background-color: crimson;
+    bottom: 15px;
+    left: 0;
 }
 
 .connections{
