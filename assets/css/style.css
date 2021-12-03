@@ -13,6 +13,7 @@ MEDIA QUERIES
     box-sizing: border-box;
 }
 /* GLOBAL END */
+
 /* HTML */
 html {
     min-height: 100%;
@@ -21,17 +22,22 @@ html {
     -o-background-size: cover;
     background-size: cover;
     background-repeat:no-repeat;
-    background: -webkit-linear-gradient( to bottom right, #7ec0ee, #8b0a50);
-    background: -moz-linear-gradient( to bottom right, #7ec0ee, #8b0a50);
-    background: -ms-linear-gradient( to bottom right, #7ec0ee, #8b0a50);
-    background: -o-linear-gradient( to bottom right, #7ec0ee, #8b0a50);
-    background: linear-gradient( to bottom right, #7ec0ee, #8b0a50);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(175,175,175,1) 100%);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(175,175,175,1) 100%);
+    background: -ms-radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(175,175,175,1) 100%);
+    background: -o-radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(175,175,175,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(175,175,175,1) 100%);
 }
 /* HTML END */
 
 /* BODY */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    margin: 60px;
+    display: flex;
 }
 /* BODY END */
 
@@ -45,11 +51,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
+    background-color: rgba(175,175,175,1);
 }
 
 header h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 40px;
     color: navy;
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -61,7 +68,7 @@ header a {
 }
 
 header nav {
-    margin: 7px 0;
+    margin: auto 0;
 }
 
 header nav ul {
@@ -86,16 +93,51 @@ header nav ul li a:hover{
 }
 /* HEADER END */
 
+.section-title {
+    padding: 0 20px;
+    margin: 0 20px;
+    border-right: 4px solid navy;
+    flex: 0 0 200px;
+    text-align: right;
+    font-size: 24px;
+}
+.content {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 80%;
+}
+.card {
+    margin: 5px;
+    border: 3px solid blue;
+    width: 45%;
+    height: 200px;
+    background-image: url("../images/run-buddy-screenshot.png");
+    background-size: cover;
+    background-position: top;
+}
+.card:nth-of-type(1){
+    border-color:crimson;
+    width: 100%;
+}
+
+.connections{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.connections a{
+    margin: auto 10px;
+    font-size: 20px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 980px){
-
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 575px) {
-
 }
 /* MEDIA QUERIES END*/
