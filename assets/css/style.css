@@ -123,6 +123,7 @@ header nav ul li a:hover{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .connections a{
@@ -174,5 +175,12 @@ header nav ul li a:hover{
 }
 
 @media screen and (max-width: 575px) {
+    .connections {
+        flex-direction: column;
+        text-align: center;
+    }
+    .connections a {
+        padding: 10px 0;
+    }
 }
 /* MEDIA QUERIES END*/
