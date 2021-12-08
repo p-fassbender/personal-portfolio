@@ -3,6 +3,9 @@ GLOBAL
 HTML
 BODY
 HEADER
+HERO
+MY WORK
+CONTACT ME
 MEDIA QUERIES
 */
 
@@ -36,37 +39,23 @@ body {
 }
 
 section {
-    margin: 60px;
+    margin: 0 60px;
     display: flex;
 }
+
+.section-title {
+    padding: 0 20px;
+    margin: 0 20px;
+    border-right: 4px solid navy;
+    flex: 0 0 200px;
+    text-align: right;
+    font-size: 24px;
+}
+
+footer {
+    margin-bottom: 60px;
+}
 /* BODY END */
-
-/* HERO START*/
-.hero {
-    margin: 0;
-    padding-top: 20px;
-    justify-content: center;
-    height: 700px;
-    width: 100%;
-    background-image: url("../images/tech-background.png");
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-}
-
-.hero-title {
-    font-size: 55px;
-}
-
-.hero-pic img {
-    object-fit: cover;
-    object-position: top;
-    border: 3px solid black;
-    margin: 3.5%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
-/* HERO END*/
 
 /* HEADER */
 header {
@@ -118,17 +107,45 @@ header nav ul li a:hover{
     border-radius: 15px;
     text-shadow: none;
 }
+
+#about-me, #my-work, #contact-me {
+    height:96px;
+}
 /* HEADER END */
 
-.section-title {
-    padding: 0 20px;
-    margin: 0 20px;
-    border-right: 4px solid navy;
-    flex: 0 0 200px;
-    text-align: right;
-    font-size: 24px;
+/* HERO START*/
+.hero {
+    margin: 0;
+    padding: 25px 0;
+    justify-content: space-evenly;
+    width: 100%;
+    background-image: url("../images/tech-background.png");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    flex-wrap: wrap;
 }
 
+.hero-title {
+    font-size: 55px;
+    padding: 0 10px;
+    text-shadow: 3px 0 10px rgb(255, 255, 255);
+}
+
+.hero-pic {
+    margin: 0 10px;
+}
+
+.hero-pic img {
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+/* HERO END*/
+
+/* MY WORK START */
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -137,17 +154,23 @@ header nav ul li a:hover{
     justify-content: center;
 }
 
-/* when screen is big the image stops scaling but the card still grows */
 .card {
-    margin: 5px;
-    border: 3px solid black;
+    margin: .75%;
+    border: 5px solid navy;
     display: flex;
     width: 45%;
-    height: 200px
+    height: 150px;
+    background-color: rgba(191,239,255, 0.3);
+    position: relative;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.card:hover {
+    background-color: rgba(191,239,255, 0);
 }
 
 .card:first-child {
-    border: 3px solid yellowgreen;
     width: 91.5%;
     height: 350px;
 }
@@ -159,19 +182,39 @@ header nav ul li a:hover{
     object-fit: cover;
     object-position: top;
     overflow: hidden;
+    z-index: -1;
+    position: relative;
 }
 
-.connections{
+.card a {
+    width: 100%;
+}
+
+.project-title {
+    position:absolute;
+    bottom: 10px;
+    padding: 10px 15px;
+    background-color:navy;
+    color: #bfefff;
+    border-radius: 0 5px 5px 0;
+}
+/* MY WORK END */
+
+/* CONTACT ME START*/
+.connections {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.connections a{
+.connections a {
     margin: auto 10px;
     font-size: 20px;
 }
+/* CONTACT ME END*/
+
+
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 980px){
@@ -214,13 +257,19 @@ header nav ul li a:hover{
     header nav ul li a {
         font-size: 20px;
     }
+
+    .biography {
+        width: 91.5%;
+        text-align: justify;
+    }
+
+    .card {
+        width: 91.5%;
+    }
 }
 
 /* make cards go one per line */
 @media screen and (max-width: 768px) {
-    
-
-    
 
 }
 
