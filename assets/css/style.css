@@ -9,6 +9,10 @@ CONTACT ME
 MEDIA QUERIES
 */
 
+:root{
+    --primary-color: navy;
+}
+
 /* GLOBAL */
 * {
     padding: 0;
@@ -16,6 +20,8 @@ MEDIA QUERIES
     box-sizing: border-box;
 }
 /* GLOBAL END */
+
+
 
 /* HTML */
 html {
@@ -46,7 +52,7 @@ section {
 .section-title {
     padding: 0 20px;
     margin: 0 20px;
-    border-right: 4px solid navy;
+    border-right: 4px solid var(--primary-color);
     flex: 0 0 200px;
     text-align: right;
     font-size: 24px;
@@ -73,13 +79,13 @@ header {
 header h1 {
     font-weight: bold;
     font-size: 40px;
-    color: navy;
+    color: var(--primary-color);
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
-    color: navy;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -102,8 +108,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover{
-    background: navy;
-    color: lightskyblue;
+    background: var(--primary-color);
+    color: rgba(191,239,255, 1);
     border-radius: 15px;
     text-shadow: none;
 }
@@ -156,7 +162,7 @@ header nav ul li a:hover{
 
 .card {
     margin: .75%;
-    border: 5px solid navy;
+    border: 5px solid var(--primary-color);
     display: flex;
     width: 45%;
     height: 150px;
@@ -194,7 +200,7 @@ header nav ul li a:hover{
     position:absolute;
     bottom: 10px;
     padding: 10px 15px;
-    background-color:navy;
+    background-color:var(--primary-color);
     color: #bfefff;
     border-radius: 0 5px 5px 0;
 }
@@ -223,7 +229,7 @@ header nav ul li a:hover{
 
     .section-title {
         border-right:none;
-        border-bottom: 4px solid navy;
+        border-bottom: 4px solid var(--primary-color);
         width: 80%;
         flex: none;
         text-align: center;
